@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="header">
+    <ul class="menu">
+      <% if logged_in? %><li class="menu-item"><%= link_to "Sign out", logout_path, class: "menu-item", method: :delete %></li><% end %>
+      <% if !logged_in? %><li class="menu-item"><%= link_to "Sign in", login_path, class: "menu-item" %></li><% end %>
+    </ul>
+  </div>
+  <% flash.each do |message_type, message| %>
+    <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+  <% end %>
 
 <%= yield %>
 

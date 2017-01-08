@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+.menu {
+  list-style: none;
+  background-color: #ebebe0;
+  padding: 8px;
+}
+
+.menu-item {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+p.post-title {
+  font-size: 14;
+  font-weight: bold;
+}
+
+span.post-author {
+  font-size: 12;
+  font-weight: normal;
+}
+
+div.post {
+  padding: 4px;
+  margin: 4px;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 6px;
+  border-color: teal;
+}

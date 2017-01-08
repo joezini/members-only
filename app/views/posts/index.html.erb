@@ -1,0 +1,15 @@
+<h1>All posts</h1>
+
+<%= link_to "Create a new post", new_post_url %>
+
+<% @posts.each do |p| %>
+  <p class="post-title">
+    <%= p.title %>
+    <% if logged_in? %>
+      <span class="post-author"> posted by <%= find_username(p.user_id) %></span>
+    <% end %>
+  </p>
+  <div class="post">
+    <%= p.body %>
+  </div>
+<% end %>
